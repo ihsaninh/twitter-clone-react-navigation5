@@ -2,7 +2,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Feather from 'react-native-vector-icons/Feather';
 
-import HomeScreen from '../screens/HomeScreen';
+import { HomeStackNavigator } from '../navigations/HomeStackNavigator/HomeStackNavigator';
 import SearchScreen from '../screens/SearchScreen';
 import NotificationScreen from '../screens/NotificationScreen';
 import InboxScreen from '../screens/InboxScreen';
@@ -11,11 +11,10 @@ const Tab = createBottomTabNavigator();
 
 function TabComponent() {
   return (
-    <Tab.Navigator
-      tabBarOptions={{ showLabel: false, style: { elevation: 10 } }}>
+    <Tab.Navigator tabBarOptions={{ showLabel: false }}>
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={HomeStackNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <Feather name="home" color={color} size={24} />
