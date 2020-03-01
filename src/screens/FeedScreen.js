@@ -5,10 +5,6 @@ function FeedScreen(props) {
   return (
     <View style={Styles.container}>
       <Text>Feed Screen</Text>
-      <Button
-        onPress={() => props.navigation.navigate('FeedDetails')}
-        title="Click"
-      />
     </View>
   );
 }
