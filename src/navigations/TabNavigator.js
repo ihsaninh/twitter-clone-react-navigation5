@@ -1,15 +1,9 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
-import { Appbar, Avatar, Colors } from 'react-native-paper';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-
-import DrawerContent from './navigations/DrawerContent';
+import Feather from 'react-native-vector-icons/Feather';
 
 const Tab = createBottomTabNavigator();
-const Stack = createStackNavigator();
 
 function Home() {
   return (
@@ -52,7 +46,7 @@ function TabComponent() {
         component={Home}
         options={{
           tabBarIcon: ({ color }) => (
-            <Ionicons name="ios-home" color={color} size={24} />
+            <Feather name="home" color={color} size={24} />
           ),
         }}
       />
@@ -61,7 +55,7 @@ function TabComponent() {
         component={Search}
         options={{
           tabBarIcon: ({ color }) => (
-            <Ionicons name="ios-search" color={color} size={24} />
+            <Feather name="search" color={color} size={24} />
           ),
         }}
       />
@@ -70,7 +64,7 @@ function TabComponent() {
         component={Notifications}
         options={{
           tabBarIcon: ({ color }) => (
-            <Ionicons name="ios-notifications" color={color} size={24} />
+            <Feather name="bell" color={color} size={24} />
           ),
         }}
       />
@@ -79,7 +73,7 @@ function TabComponent() {
         component={Message}
         options={{
           tabBarIcon: ({ color }) => (
-            <Ionicons name="ios-mail" color={color} size={24} />
+            <Feather name="mail" color={color} size={24} />
           ),
         }}
       />
@@ -87,22 +81,4 @@ function TabComponent() {
   );
 }
 
-function HomeScreen() {
-  return (
-    <Stack.Navigator headerMode="none">
-      <Stack.Screen name="Home" children={TabComponent} />
-    </Stack.Navigator>
-  );
-}
-
-const Drawer = createDrawerNavigator();
-
-const RootNavigator = () => {
-  return (
-    <Drawer.Navigator drawerContent={() => <DrawerContent />}>
-      <Drawer.Screen name="Home" component={HomeScreen} />
-    </Drawer.Navigator>
-  );
-};
-
-export { RootNavigator };
+export { TabComponent };

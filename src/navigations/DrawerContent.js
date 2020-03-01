@@ -78,7 +78,7 @@ function DrawerContent(props) {
           />
         </Drawer.Section>
         <Drawer.Section title="Preferences">
-          <TouchableRipple onPress={() => {}}>
+          <TouchableRipple onPress={() => {}} rippleColor="rgba(0, 0, 0, .1)">
             <View style={styles.preference}>
               <Text>Dark Theme</Text>
               <View pointerEvents="none">
@@ -86,7 +86,7 @@ function DrawerContent(props) {
               </View>
             </View>
           </TouchableRipple>
-          <TouchableRipple onPress={() => {}}>
+          <TouchableRipple onPress={() => {}} rippleColor="rgba(0, 0, 0, .1)">
             <View style={styles.preference}>
               <Text>RTL</Text>
               <View pointerEvents="none">
@@ -151,4 +151,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DrawerContent;
+export { DrawerContent };
