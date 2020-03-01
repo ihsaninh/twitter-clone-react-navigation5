@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Feather from 'react-native-vector-icons/Feather';
 import { Colors } from 'react-native-paper';
 
@@ -8,18 +8,21 @@ import SearchScreen from '../screens/SearchScreen';
 import NotificationScreen from '../screens/NotificationScreen';
 import InboxScreen from '../screens/InboxScreen';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
+
+const barStyle = {
+  backgroundColor: Colors.white,
+};
 
 function TabComponent() {
   return (
     <Tab.Navigator
-      tabBarOptions={{
-        showLabel: false,
-        activeTintColor: Colors.blue400,
-        tabStyle: { elevation: 0 },
-      }}>
+      activeColor={Colors.blue400}
+      barStyle={barStyle}
+      shifting={false}
+      labeled={false}>
       <Tab.Screen
-        name="Home"
+        name="Feed"
         component={HomeStackNavigator}
         options={{
           tabBarIcon: ({ color }) => (

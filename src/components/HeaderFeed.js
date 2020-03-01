@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Avatar, Colors, IconButton } from 'react-native-paper';
-import Feather from 'react-native-vector-icons/Feather';
 
 const HeaderFeed = ({ navigation, title }) => {
   return (
@@ -25,9 +24,11 @@ const HeaderFeed = ({ navigation, title }) => {
       </View>
       <View>
         <IconButton
-          icon={() => <Feather name="star" color={Colors.blue400} size={20} />}
+          icon="star-four-points-outline"
+          color={Colors.blue300}
           style={Styles.avatarStar}
           onPress={() => console.log('Pressed')}
+          animated
         />
       </View>
     </View>
@@ -57,6 +58,6 @@ const Styles = StyleSheet.create({
     marginLeft: 15,
   },
   avatarStar: {
-    marginLeft: 20,
+    paddingBottom: 3,
   },
 });
