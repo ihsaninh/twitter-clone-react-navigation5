@@ -9,7 +9,7 @@ const Drawer = createDrawerNavigator();
 const RootNavigator = () => {
   return (
     <Drawer.Navigator drawerContent={() => <DrawerContent />}>
-      <Drawer.Screen name="Home" component={TabComponent} />
+      <Drawer.Screen name="TabComponent" component={TabComponent} />
     </Drawer.Navigator>
   );
 };

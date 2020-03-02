@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { FAB, Colors } from 'react-native-paper';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 function FeedScreen(props) {
   return (

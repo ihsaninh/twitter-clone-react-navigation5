@@ -1,6 +1,9 @@
 import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Feather from 'react-native-vector-icons/Feather';
+import Foundation from 'react-native-vector-icons/Foundation';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Colors } from 'react-native-paper';
 
 import { HomeStackNavigator } from '../navigations/HomeStackNavigator/HomeStackNavigator';
@@ -25,36 +28,48 @@ function TabComponent() {
         name="Feed"
         component={HomeStackNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <Feather name="home" color={color} size={24} />
-          ),
+          tabBarIcon: ({ color, focused }) =>
+            focused ? (
+              <Foundation name="home" color={color} size={26} />
+            ) : (
+              <Feather name="home" color={color} size={24} />
+            ),
         }}
       />
       <Tab.Screen
         name="Search"
         component={SearchScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <Feather name="search" color={color} size={24} />
-          ),
+          tabBarIcon: ({ color, focused }) =>
+            focused ? (
+              <FontAwesome name="search" color={color} size={24} />
+            ) : (
+              <Feather name="search" color={color} size={24} />
+            ),
         }}
       />
       <Tab.Screen
         name="Notifications"
         component={NotificationScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <Feather name="bell" color={color} size={24} />
-          ),
+          tabBarIcon: ({ color, focused }) =>
+            focused ? (
+              <FontAwesome name="bell" color={color} size={24} />
+            ) : (
+              <Feather name="bell" color={color} size={24} />
+            ),
         }}
       />
       <Tab.Screen
         name="Message"
         component={InboxScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <Feather name="mail" color={color} size={24} />
-          ),
+          tabBarIcon: ({ color, focused }) =>
+            focused ? (
+              <MaterialCommunityIcons name="email" color={color} size={25} />
+            ) : (
+              <Feather name="mail" color={color} size={24} />
+            ),
         }}
       />
     </Tab.Navigator>

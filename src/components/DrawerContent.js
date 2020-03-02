@@ -57,6 +57,7 @@ function DrawerContent(props) {
             )}
             label="Profile"
             onPress={() => {}}
+            labelStyle={styles.labelStyle}
           />
           <DrawerItem
             icon={({ color, size }) => (
@@ -64,6 +65,7 @@ function DrawerContent(props) {
             )}
             label="Preferences"
             onPress={() => {}}
+            labelStyle={styles.labelStyle}
           />
           <DrawerItem
             icon={({ color, size }) => (
@@ -73,6 +75,7 @@ function DrawerContent(props) {
                 size={size}
               />
             )}
+            labelStyle={styles.labelStyle}
             label="Bookmarks"
             onPress={() => {}}
           />
@@ -137,6 +140,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingVertical: 12,
     paddingHorizontal: 16,
+    alignItems: 'center',
   },
   acccountInfo: {
     marginBottom: 10,
@@ -148,6 +152,9 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingBottom: 8,
     paddingTop: 5,
+  },
+  labelStyle: {
+    marginLeft: -10,
   },
 });
 
