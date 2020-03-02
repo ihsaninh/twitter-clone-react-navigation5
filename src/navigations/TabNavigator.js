@@ -7,6 +7,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Colors } from 'react-native-paper';
 
 import { HomeStackNavigator } from '../navigations/HomeStackNavigator/HomeStackNavigator';
+import { NotificationStackNavigator } from '../navigations/NotificationStackNavigator/NotificationStackNavigator';
 import SearchScreen from '../screens/SearchScreen';
 import NotificationScreen from '../screens/NotificationScreen';
 import InboxScreen from '../screens/InboxScreen';
@@ -50,7 +51,7 @@ function TabComponent() {
       />
       <Tab.Screen
         name="Notifications"
-        component={NotificationScreen}
+        component={NotificationStackNavigator}
         options={{
           tabBarIcon: ({ color, focused }) =>
             focused ? (
