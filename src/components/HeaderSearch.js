@@ -1,11 +1,6 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
-import {
-  Avatar,
-  Colors,
-  IconButton,
-  TouchableRipple,
-} from 'react-native-paper';
+import { Avatar, Colors, IconButton } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const HeaderSearch = ({ navigation, title }) => {
@@ -75,7 +70,7 @@ const Styles = StyleSheet.create({
   },
   searchBar: {
     width: 280,
-    height: 38,
+    height: 36,
     marginLeft: 20,
     borderRadius: 20,
     borderColor: Colors.grey300,
@@ -83,8 +78,8 @@ const Styles = StyleSheet.create({
     backgroundColor: Colors.grey200,
   },
   searchPlaceholder: {
-    paddingLeft: 10,
-    paddingTop: 8,
+    paddingLeft: 15,
+    paddingTop: 7,
     color: Colors.grey600,
     fontSize: 16,
   },

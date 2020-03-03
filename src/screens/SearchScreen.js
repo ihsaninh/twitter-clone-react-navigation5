@@ -35,6 +35,7 @@ const renderLatestTreding = () => {
     <>
       <List.Item
         onPress={item.action}
+        rippleColor="rgba(0, 0, 0, 0.1)"
         title={item.trendingName}
         titleStyle={Styles.trendTitle}
         description={item.totalTweets}
@@ -59,9 +60,18 @@ const renderFab = () => {
   );
 };
 
+const renderTitleTrends = () => {
+  return (
+    <View style={Styles.titleTrends}>
+      <Text style={Styles.titleTrendsText}>Indonesia trends</Text>
+    </View>
+  );
+};
+
 const SearchScreen = () => {
   return (
     <View style={Styles.container}>
+      {renderTitleTrends()}
       {renderLatestTreding()}
       {renderFab()}
     </View>
@@ -93,5 +103,17 @@ const Styles = StyleSheet.create({
   },
   trendTitle: {
     fontWeight: 'bold',
+  },
+  titleTrends: {
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.grey100,
+    borderTopWidth: 1,
+    borderTopColor: Colors.grey100,
+  },
+  titleTrendsText: {
+    fontSize: 19,
+    fontWeight: 'bold',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
   },
 });
