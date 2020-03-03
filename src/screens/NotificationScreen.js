@@ -30,19 +30,20 @@ function NotificationScreen() {
         color={Colors.white}
         onPress={() => console.log('Pressed')}
       />
-      <Tab.Navigator
-        tabBarOptions={{
-          indicatorStyle: { backgroundColor: Colors.blue400 },
-          activeTintColor: Colors.blue400,
-          inactiveTintColor: Colors.grey400,
-          labelStyle: { fontWeight: '700' },
-        }}>
+      <Tab.Navigator tabBarOptions={tabBarOptions}>
         <Tab.Screen name="All" component={NotifScreen} />
         <Tab.Screen name="Mentions" component={NotifScreenMentions} />
       </Tab.Navigator>
     </Fragment>
   );
 }
+
+const tabBarOptions = {
+  indicatorStyle: { backgroundColor: Colors.blue400 },
+  activeTintColor: Colors.blue400,
+  inactiveTintColor: Colors.grey400,
+  labelStyle: { fontWeight: '700' },
+};
 
 export { NotificationScreen };
 

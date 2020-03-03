@@ -7,10 +7,9 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Colors } from 'react-native-paper';
 
 import { HomeStackNavigator } from '../navigations/HomeStackNavigator/HomeStackNavigator';
+import { InboxStackNavigator } from '../navigations/InboxStackNavigator/InboxStackNavigator';
 import { NotificationStackNavigator } from '../navigations/NotificationStackNavigator/NotificationStackNavigator';
 import SearchScreen from '../screens/SearchScreen';
-import NotificationScreen from '../screens/NotificationScreen';
-import InboxScreen from '../screens/InboxScreen';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -62,8 +61,8 @@ function TabComponent() {
         }}
       />
       <Tab.Screen
-        name="Message"
-        component={InboxScreen}
+        name="Messages"
+        component={InboxStackNavigator}
         options={{
           tabBarIcon: ({ color, focused }) =>
             focused ? (
