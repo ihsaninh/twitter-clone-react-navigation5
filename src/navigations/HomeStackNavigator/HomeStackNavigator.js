@@ -11,7 +11,7 @@ function HomeStackNavigator() {
   return (
     <Stack.Navigator headerMode="screen" initialRouteName="Feed">
       <Stack.Screen
-        name="Home"
+        name="Feed"
         component={FeedScreen}
         options={{ header: props => <HeaderFeed title="Beranda" {...props} /> }}
       />

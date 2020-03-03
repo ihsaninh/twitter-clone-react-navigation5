@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 
 function InboxStackNavigator() {
   return (
-    <Stack.Navigator headerMode="screen" initialRouteName="Feed">
+    <Stack.Navigator headerMode="screen" initialRouteName="InboxScreen">
       <Stack.Screen
         name="Messages"
         component={InboxScreen}

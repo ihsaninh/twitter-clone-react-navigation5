@@ -8,9 +8,9 @@ const Stack = createStackNavigator();
 
 function NotificationStackNavigator() {
   return (
-    <Stack.Navigator headerMode="screen" initialRouteName="Feed">
+    <Stack.Navigator headerMode="screen" initialRouteName="NotificationScreen">
       <Stack.Screen
-        name="Home"
+        name="Notifications"
         component={NotificationScreen}
         options={{
           header: props => (

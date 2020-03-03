@@ -8,9 +8,9 @@ const Stack = createStackNavigator();
 
 function SearchStackNavigator() {
   return (
-    <Stack.Navigator headerMode="screen" initialRouteName="Feed">
+    <Stack.Navigator headerMode="screen" initialRouteName="SearchScreen">
       <Stack.Screen
-        name="Messages"
+        name="SearchScreen"
         component={SearchScreen}
         options={{
           header: props => <HeaderSearch {...props} />,
