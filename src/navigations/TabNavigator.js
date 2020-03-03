@@ -7,9 +7,9 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Colors } from 'react-native-paper';
 
 import { HomeStackNavigator } from '../navigations/HomeStackNavigator/HomeStackNavigator';
+import { SearchStackNavigator } from '../navigations/SearchStackNavigator/SearchStackNavigator';
 import { InboxStackNavigator } from '../navigations/InboxStackNavigator/InboxStackNavigator';
 import { NotificationStackNavigator } from '../navigations/NotificationStackNavigator/NotificationStackNavigator';
-import SearchScreen from '../screens/SearchScreen';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -38,7 +38,7 @@ function TabComponent() {
       />
       <Tab.Screen
         name="Search"
-        component={SearchScreen}
+        component={SearchStackNavigator}
         options={{
           tabBarIcon: ({ color, focused }) =>
             focused ? (
