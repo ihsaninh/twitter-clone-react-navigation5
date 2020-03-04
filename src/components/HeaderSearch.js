@@ -1,7 +1,12 @@
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
+import {
+  View,
+  TouchableOpacity,
+  StyleSheet,
+  Text,
+  SafeAreaView,
+} from 'react-native';
 import { Avatar, Colors, IconButton } from 'react-native-paper';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 const HeaderSearch = ({ navigation, title }) => {
   return (

@@ -34,6 +34,7 @@ const renderLatestTreding = () => {
   return trends.map((item, i) => (
     <>
       <List.Item
+        key={i}
         onPress={item.action}
         rippleColor="rgba(0, 0, 0, 0.1)"
         title={item.trendingName}

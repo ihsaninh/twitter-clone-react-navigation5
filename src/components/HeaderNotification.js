@@ -1,7 +1,12 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  SafeAreaView,
+} from 'react-native';
 import { Avatar, Colors, IconButton } from 'react-native-paper';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 const HeaderNotification = ({ navigation, title }) => {
   return (

@@ -1,26 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Text } from 'react-native';
-import { List, Avatar, Colors } from 'react-native-paper';
+import { List, Avatar, Colors, FAB } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 
 const InboxScreen = props => {
-  const data = [
-    {
-      title: '',
-      description: '',
-      imgUrl: '',
-      time: '',
-      onPress: () => null,
-    },
-  ];
   return (
-    <>
+    <Fragment>
       <List.Item
         onPress={() => null}
         rippleColor="rgba(0,0,0,0.1)"
         title="Info Commuter Line"
         description="Dapat kami sampaikan silahan di periksa kembali jaringan internetnya serta install ulang u..."
-        left={props => (
+        left={() => (
           <Avatar.Image
             size={55}
             style={Styles.img}
@@ -30,12 +21,18 @@ const InboxScreen = props => {
             }}
           />
         )}
-        right={props => <Text style={Styles.time}>12 Feb</Text>}
+        right={() => <Text style={Styles.time}>12 Feb</Text>}
         titleStyle={Styles.titleStyle}
         descriptionStyle={Styles.descriptionStyle}
         style={Styles.card}
       />
-    </>
+      <FAB
+        style={Styles.fab}
+        icon="email-plus-outline"
+        color={Colors.white}
+        onPress={() => console.log('Pressed')}
+      />
+    </Fragment>
   );
 };
 
@@ -61,10 +58,20 @@ const Styles = StyleSheet.create({
   },
   img: {
     marginTop: 6,
+    backgroundColor: 'transparent',
   },
   card: {
     backgroundColor: Colors.white,
     borderTopColor: Colors.grey200,
     borderTopWidth: 1,
+  },
+  fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 0,
+    bottom: 0,
+    elevation: 1,
+    zIndex: 1,
+    backgroundColor: Colors.blue300,
   },
 });
