@@ -6,10 +6,10 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Colors } from 'react-native-paper';
 
-import { HomeStackNavigator } from '../navigations/HomeStackNavigator/HomeStackNavigator';
-import { SearchStackNavigator } from '../navigations/SearchStackNavigator/SearchStackNavigator';
-import { InboxStackNavigator } from '../navigations/InboxStackNavigator/InboxStackNavigator';
-import { NotificationStackNavigator } from '../navigations/NotificationStackNavigator/NotificationStackNavigator';
+import { HomeStackNavigator } from '../HomeStackNavigator/HomeStackNavigator';
+import { SearchStackNavigator } from '../SearchStackNavigator/SearchStackNavigator';
+import { InboxStackNavigator } from '../InboxStackNavigator/InboxStackNavigator';
+import { NotificationStackNavigator } from '../NotificationStackNavigator/NotificationStackNavigator';
 
 const Tab = createMaterialBottomTabNavigator();
 
