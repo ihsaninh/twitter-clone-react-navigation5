@@ -5,7 +5,7 @@ import { Provider as PaperProvider, Colors } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
 
-import { RootNavigator } from './src/navigations/RootNavigation';
+import { RootNavigator } from './src/navigations/RootNavigator/RootNavigation';
 
 enableScreens();
 
