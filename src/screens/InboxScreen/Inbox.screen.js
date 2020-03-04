@@ -36,7 +36,7 @@ const InboxScreen = props => {
   );
 };
 
-export { InboxScreen };
+export default InboxScreen;
 
 const Styles = StyleSheet.create({
   container: {

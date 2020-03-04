@@ -17,7 +17,7 @@ function FeedScreen(props) {
   );
 }
 
-export { FeedScreen };
+export default FeedScreen;
 
 const Styles = StyleSheet.create({
   container: {

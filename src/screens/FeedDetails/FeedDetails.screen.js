@@ -13,7 +13,7 @@ function FeedDetails(props) {
   );
 }
 
-export { FeedDetails };
+export default FeedDetails;
 
 const Styles = StyleSheet.create({
   container: {

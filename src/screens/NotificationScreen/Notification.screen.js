@@ -45,7 +45,7 @@ const tabBarOptions = {
   labelStyle: { fontWeight: '700' },
 };
 
-export { NotificationScreen };
+export default NotificationScreen;
 
 const Styles = StyleSheet.create({
   container: {

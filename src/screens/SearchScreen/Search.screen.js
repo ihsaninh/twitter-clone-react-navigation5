@@ -79,7 +79,7 @@ const SearchScreen = () => {
   );
 };
 
-export { SearchScreen };
+export default SearchScreen;
 
 const Styles = StyleSheet.create({
   container: {
