@@ -1,17 +1,16 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { FeedScreen } from '../../screens/FeedScreen';
 import { HeaderFeed } from '../../components/HeaderFeed';
-import { FeedDetails } from '../../screens/FeedDetails';
+import { FeedScreen, FeedDetails } from '../../screens';
 
 const Stack = createStackNavigator();
 
 function HomeStackNavigator() {
   return (
-    <Stack.Navigator headerMode="screen" initialRouteName="Feed">
+    <Stack.Navigator initialRouteName="FeedScreen">
       <Stack.Screen
-        name="Feed"
+        name="FeedScreen"
         component={FeedScreen}
         options={{ header: props => <HeaderFeed title="Beranda" {...props} /> }}
       />

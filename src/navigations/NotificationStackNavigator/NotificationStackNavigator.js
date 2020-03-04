@@ -1,14 +1,14 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { NotificationScreen } from '../../screens/NotificationScreen';
+import { NotificationScreen } from '../../screens';
 import { HeaderNotification } from '../../components/HeaderNotification';
 
 const Stack = createStackNavigator();
 
 function NotificationStackNavigator() {
   return (
-    <Stack.Navigator headerMode="screen" initialRouteName="NotificationScreen">
+    <Stack.Navigator initialRouteName="NotificationScreen">
       <Stack.Screen
         name="Notifications"
         component={NotificationScreen}

@@ -1,14 +1,14 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { InboxScreen } from '../../screens/InboxScreen';
+import { InboxScreen } from '../../screens';
 import { HeaderNotification } from '../../components/HeaderNotification';
 
 const Stack = createStackNavigator();
 
 function InboxStackNavigator() {
   return (
-    <Stack.Navigator headerMode="screen" initialRouteName="InboxScreen">
+    <Stack.Navigator initialRouteName="InboxScreen">
       <Stack.Screen
         name="Messages"
         component={InboxScreen}
